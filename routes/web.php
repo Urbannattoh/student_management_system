@@ -2,7 +2,15 @@
 
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\ClassesController;
+use App\Http\Controllers\GradeController;
+use App\Http\Controllers\LevelController;
+use App\Http\Controllers\DayController;
+use App\Http\Controllers\TimeController;
+use App\Http\Controllers\ShiftController;
+use App\Http\Controllers\SubjectController;
+use App\Http\Controllers\SessionController;
+use App\Http\Controllers\SectionController;
 
 
 Route::get('/', function () {
@@ -22,6 +30,7 @@ Route::prefix('admin')->group(function()
     Route::resource('shifts',ShiftController::class);
     Route::resource('subjects',SubjectController::class);
     Route::resource('sessions',SessionController::class);
+    Route::resource('sections',SectionController::class);
 
 });
 

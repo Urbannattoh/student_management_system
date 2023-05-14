@@ -156,8 +156,8 @@
                             </span>
                             <div class="drop-down dropdown-profile dropdown-menu dropdown-menu-right">
                                 <div class="dropdown-content-heading">
-                                    <span class="text-left">Upgrade Now</span>
-                                    <p class="trial-day">30 Days Trail</p>
+                                    <span class="text-left">PROSECUTION TRAINING</span>
+                                    <p class="trial-day">INSTITUTE</p>
                                 </div>
                                 <div class="dropdown-content-body">
                                     <ul>

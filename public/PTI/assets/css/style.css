@@ -837,7 +837,7 @@ a.dt-button.active:not(.disabled) {
 .dropdown-profile .trial-day {
   font-size: 11px;
   padding-top: 2px;
-  color: #5873fe;
+  color: #000000;
 }
 .dropdown-profile li {
   padding: 7px 15px;
