@@ -38,6 +38,9 @@
     <link href="{{ asset('pti/assets/css/lib/bootstrap.min.css') }}" rel="stylesheet">
     <link href="{{ asset('pti/assets/css/lib/helper.css') }}" rel="stylesheet">
     <link href="{{ asset('pti/assets/css/style.css') }}" rel="stylesheet">
+    
+    @stack('style')
+    
 </head>
 
 <body>
@@ -92,6 +95,7 @@
         <script src="{{ asset('pti/assets/js/lib/owl-carousel/owl.carousel-init.js') }}"></script>
         <!-- scripit init-->
         <script src="{{ asset('pti/assets/js/dashboard2.js') }}"></script>
+        @stack('script')
 
 </body>
 

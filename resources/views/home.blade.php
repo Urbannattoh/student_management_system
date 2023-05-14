@@ -21,7 +21,7 @@
                     <div class="stat-icon dib"><i class="ti-user color-primary border-primary"></i>
                     </div>
                     <div class="stat-content dib">
-                        <div class="stat-text">New Customer</div>
+                        <div class="stat-text">New</div>
                         <div class="stat-digit">961</div>
                     </div>
                 </div>
@@ -33,7 +33,7 @@
                     <div class="stat-icon dib"><i class="ti-layout-grid2 color-pink border-pink"></i>
                     </div>
                     <div class="stat-content dib">
-                        <div class="stat-text">Active Projects</div>
+                        <div class="stat-text">Active</div>
                         <div class="stat-digit">770</div>
                     </div>
                 </div>
