@@ -38,9 +38,7 @@
     <link href="{{ asset('pti/assets/css/lib/bootstrap.min.css') }}" rel="stylesheet">
     <link href="{{ asset('pti/assets/css/lib/helper.css') }}" rel="stylesheet">
     <link href="{{ asset('pti/assets/css/style.css') }}" rel="stylesheet">
-    
     @stack('style')
-    
 </head>
 
 <body>

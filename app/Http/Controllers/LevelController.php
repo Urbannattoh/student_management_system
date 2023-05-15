@@ -25,6 +25,15 @@ class LevelController extends Controller
 
     public function store(Request $request): RedirectResponse
     {
+        // $this->validated($request);
+        $levelservice = New Level;
+        $levelservice->level_name =  $request->level_name;
+        $levelservice->description =  $request->description;
+        $levelservice->level_status =  $request->level_status;
+        $levelservice->save();
+
+
+        // ->storeLevelData(new Level(), $request);
         return redirect()->route('levels.index');
     }
 
@@ -49,5 +58,15 @@ class LevelController extends Controller
     public function destroy(Level $level): RedirectResponse
     {
         return redirect()->route('levels.index');
+    }
+
+    protected function validated ($request)
+    {
+        return $this->validate($request,[
+            'level_name' => 'required|max:100',
+            'level_status' => 'required|min:1',
+            'description' => 'nullable|max:500',
+        ]);
+
     }
 }

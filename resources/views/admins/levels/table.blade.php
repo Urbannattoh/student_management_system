@@ -15,19 +15,29 @@
                     <thead>
                         <tr>
                             <th>Name</th>
-                            <th>Position</th>
-                            <th>Office</th>
-                            <th>Salary</th>
+                            <th>Status</th>
+                            <th>Description</th>
+                            <th>Action</th>
                         </tr>
                     </thead>
                     <tbody>
+                        @forelse ($levels as $level)
                         <tr>
-                            <td>Tiger Nixon</td>
-                            <td>System Architect</td>
-                            <td>Edinburgh</td>
-                            <td>$320,800</td>
+                            <td>{{ $level ->level_name }}</td>
+                            <td>{{ $level ->level_status }}</td>
+                            <td>{{ $level ->description }}</td>
+                            
+                            <td>
+                                <a class="btn btn-info btn-flat" href="{{ route('levels.edit',$level->id) }}"> 
+                                    <i class="fa fa-edit"></i>Edit </a>
+
+                                <a class="btn btn-danger btn-flat btnDelete" href="#DeleteConfirmation" data-toggle="modal"
+                                data-url="{{ route('levels.destroy' , $level->id) }}">
+                                     <i class="fa fa-trash"></i>Deleted </a>
+                            </td>
                         </tr>
-                        
+                        @empty
+                        @endforelse
                     </tbody>
                 </table>
             </div>
@@ -38,15 +48,11 @@
 
 @push('script')
 
-<!-- scripit init-->
-    <script src="{{ asset('pti/assets/js/lib/data-table/datatables.min.js') }}"></script>
-    <script src="{{ asset('pti/assets/js/lib/data-table/dataTables.buttons.min.js') }}"></script>
-    <script src="{{ asset('pti/assets/js/lib/data-table/buttons.flash.min.js') }}"></script>
-    <script src="{{ asset('pti/assets/js/lib/data-table/jszip.min.js') }}"></script>
-    <script src="{{ asset('pti/assets/js/lib/data-table/pdfmake.min.js') }}"></script>
-    <script src="{{ asset('pti/assets/js/lib/data-table/vfs_fonts.js') }}"></script>
-    <script src="{{ asset('pti/assets/js/lib/data-table/buttons.html5.min.js') }}"></script>
-    <script src="{{ asset('pti/assets/js/lib/data-table/buttons.print.min.js') }}"></script>
-    <script src="{{ asset('pti/assets/js/lib/data-table/datatables-init.js') }}"></script>
+<script>
+    $('.btnDelete').on('click', function()
+    {
+        $('.formDelete').attr('action', $(this).data('url'))
+    });
+</script>
 
 @endpush
